@@ -8,7 +8,7 @@ tags:
   - laboratory
   - code
 type: code-index
-up: "[[Материалы для студентов/01_classes_and_object_model/01_oop_classes_and_object_model]]"
+up: "[[01_classes_and_object_model/01_oop_classes_and_object_model]]"
 ---
 
 # Lab 01: последовательные версии проекта
@@ -38,4 +38,4 @@ cmake --build --preset debug --target lab01_step_08_robot_v1
 3. Попробуйте внести следующее изменение самостоятельно.
 4. Только затем откройте следующий файл.
 
-Конспект: [[Материалы для студентов/01_classes_and_object_model/01_oop_classes_and_object_model|Лабораторная №1 — классы и устройство объектов]].
+Конспект: [[01_classes_and_object_model/01_oop_classes_and_object_model|Лабораторная №1 — классы и устройство объектов]].
