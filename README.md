@@ -27,7 +27,7 @@ course: "C++ OOP"
 └── README.md                          эта инструкция
 ~~~
 
-Конспект: [[Материалы для студентов/01_classes_and_object_model/01_oop_classes_and_object_model|Основы ООП в C++: классы и устройство объектов]].
+Конспект: [[01_oop_classes_and_object_model|Основы ООП в C++: классы и устройство объектов]].
 
 ## Требования
 
