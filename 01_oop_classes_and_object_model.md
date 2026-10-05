@@ -60,26 +60,26 @@ updated: 2026-10-05
 
 ## 3. Как работать с исходниками
 
-Исходники расположены в каталоге [[Материалы для студентов/01_classes_and_object_model/steps/README|steps]]. Каждый файл — самостоятельное, компилируемое состояние демонстрационного проекта.
+Исходники расположены в каталоге [[01_classes_and_object_model/steps/README|steps]]. Каждый файл — самостоятельное, компилируемое состояние демонстрационного проекта.
 
 | Шаг | Файл | Новое понятие |
 |---:|---|---|
-| 01 | [[Материалы для студентов/01_classes_and_object_model/steps/01_related_variables.cpp]] | Связанные переменные |
-| 02 | [[Материалы для студентов/01_classes_and_object_model/steps/02_player_struct.cpp]] | Пользовательский тип и объект |
-| 03 | [[Материалы для студентов/01_classes_and_object_model/steps/03_player_methods.cpp]] | Методы и состояние |
-| 04 | [[Материалы для студентов/01_classes_and_object_model/steps/04_player_class_invariants.cpp]] | <code>class</code>, <code>private</code>, инвариант |
-| 05 | [[Материалы для студентов/01_classes_and_object_model/steps/05_default_constructor.cpp]] | Конструктор по умолчанию |
-| 06 | [[Материалы для студентов/01_classes_and_object_model/steps/06_parameterized_constructor.cpp]] | Параметризованный конструктор |
-| 07 | [[Материалы для студентов/01_classes_and_object_model/steps/07_delegating_explicit.cpp]] | Делегирование и <code>explicit</code> |
-| 08 | [[Материалы для студентов/01_classes_and_object_model/steps/08_robot_v1.cpp]] | Первый законченный класс <code>Robot</code> |
-| 09 | [[Материалы для студентов/01_classes_and_object_model/steps/09_lifecycle_destructor.cpp]] | Время жизни и деструктор |
-| 10 | [[Материалы для студентов/01_classes_and_object_model/steps/10_const_mutable_cache.cpp]] | <code>const</code>, логическая константность, <code>mutable</code> |
-| 11 | [[Материалы для студентов/01_classes_and_object_model/steps/11_out_of_class_overloads.cpp]] | Определения вне класса и перегрузка |
-| 12 | [[Материалы для студентов/01_classes_and_object_model/steps/12_composition.cpp]] | Композиция <code>Robot</code>, <code>Position</code>, <code>Battery</code> |
-| 13 | [[Материалы для студентов/01_classes_and_object_model/steps/13_enum_static.cpp]] | <code>enum class</code> и <code>static</code> |
-| 14 | [[Материалы для студентов/01_classes_and_object_model/steps/14_layout_alignment.cpp]] | Layout, <code>sizeof</code>, <code>alignof</code>, padding |
-| 15 | [[Материалы для студентов/01_classes_and_object_model/steps/15_tagged_union.cpp]] | <code>union</code>, активный член и тег |
-| 16 | [[Материалы для студентов/01_classes_and_object_model/steps/16_robot_v2.cpp]] | Итоговая версия составного робота |
+| 01 | [[01_classes_and_object_model/steps/01_related_variables.cpp]] | Связанные переменные |
+| 02 | [[01_classes_and_object_model/steps/02_player_struct.cpp]] | Пользовательский тип и объект |
+| 03 | [[01_classes_and_object_model/steps/03_player_methods.cpp]] | Методы и состояние |
+| 04 | [[01_classes_and_object_model/steps/04_player_class_invariants.cpp]] | <code>class</code>, <code>private</code>, инвариант |
+| 05 | [[01_classes_and_object_model/steps/05_default_constructor.cpp]] | Конструктор по умолчанию |
+| 06 | [[01_classes_and_object_model/steps/06_parameterized_constructor.cpp]] | Параметризованный конструктор |
+| 07 | [[01_classes_and_object_model/steps/07_delegating_explicit.cpp]] | Делегирование и <code>explicit</code> |
+| 08 | [[01_classes_and_object_model/steps/08_robot_v1.cpp]] | Первый законченный класс <code>Robot</code> |
+| 09 | [[01_classes_and_object_model/steps/09_lifecycle_destructor.cpp]] | Время жизни и деструктор |
+| 10 | [[01_classes_and_object_model/steps/10_const_mutable_cache.cpp]] | <code>const</code>, логическая константность, <code>mutable</code> |
+| 11 | [[01_classes_and_object_model/steps/11_out_of_class_overloads.cpp]] | Определения вне класса и перегрузка |
+| 12 | [[01_classes_and_object_model/steps/12_composition.cpp]] | Композиция <code>Robot</code>, <code>Position</code>, <code>Battery</code> |
+| 13 | [[01_classes_and_object_model/steps/13_enum_static.cpp]] | <code>enum class</code> и <code>static</code> |
+| 14 | [[01_classes_and_object_model/steps/14_layout_alignment.cpp]] | Layout, <code>sizeof</code>, <code>alignof</code>, padding |
+| 15 | [[01_classes_and_object_model/steps/15_tagged_union.cpp]] | <code>union</code>, активный член и тег |
+| 16 | [[01_classes_and_object_model/steps/16_robot_v2.cpp]] | Итоговая версия составного робота |
 
 Не переписывайте файл целиком вслепую. Перед каждым следующим шагом:
 
@@ -107,7 +107,7 @@ bool playerAlive = true;
 
 Все переменные относятся к одной сущности, но язык пока никак не выражает эту связь. Для второго игрока придётся создавать ещё один набор имён. Функция легко может получить здоровье одного игрока и координату другого.
 
-Первая версия: [[Материалы для студентов/01_classes_and_object_model/steps/01_related_variables.cpp|01_related_variables.cpp]].
+Первая версия: [[01_classes_and_object_model/steps/01_related_variables.cpp|01_related_variables.cpp]].
 
 ## 5. Структура как пользовательский тип
 
@@ -144,7 +144,7 @@ second.x = 6;
 - **поле** — данные, входящие в объект;
 - **состояние** — совокупность текущих значений полей.
 
-Следующий шаг: [[Материалы для студентов/01_classes_and_object_model/steps/02_player_struct.cpp|02_player_struct.cpp]].
+Следующий шаг: [[01_classes_and_object_model/steps/02_player_struct.cpp|02_player_struct.cpp]].
 
 ## 6. Что означает const char*
 
@@ -208,7 +208,7 @@ Player player;
 player.takeDamage(30);
 ~~~
 
-Метод вызывается для конкретного объекта класса и работает с его полями. Код находится в [[Материалы для студентов/01_classes_and_object_model/steps/03_player_methods.cpp|03_player_methods.cpp]].
+Метод вызывается для конкретного объекта класса и работает с его полями. Код находится в [[01_classes_and_object_model/steps/03_player_methods.cpp|03_player_methods.cpp]].
 
 ### Упражнение 1
 
@@ -279,7 +279,7 @@ alive == (health > 0)
 
 Инкапсуляция нужна не просто для сокрытия полей. Её цель — сосредоточить правила изменения состояния внутри самого типа.
 
-Готовый этап: [[Материалы для студентов/01_classes_and_object_model/steps/04_player_class_invariants.cpp|04_player_class_invariants.cpp]].
+Готовый этап: [[01_classes_and_object_model/steps/04_player_class_invariants.cpp|04_player_class_invariants.cpp]].
 
 ### Упражнение 2
 
@@ -340,7 +340,7 @@ private:
 };
 ~~~
 
-Пример: [[Материалы для студентов/01_classes_and_object_model/steps/05_default_constructor.cpp|05_default_constructor.cpp]].
+Пример: [[01_classes_and_object_model/steps/05_default_constructor.cpp|05_default_constructor.cpp]].
 
 ## 12. Параметризованный конструктор
 
@@ -361,7 +361,7 @@ Robot second("C3PO", 60);
 
 Используйте список инициализации вместо присваивания уже созданным полям в теле конструктора.
 
-Пример: [[Материалы для студентов/01_classes_and_object_model/steps/06_parameterized_constructor.cpp|06_parameterized_constructor.cpp]].
+Пример: [[01_classes_and_object_model/steps/06_parameterized_constructor.cpp|06_parameterized_constructor.cpp]].
 
 ## 13. Порядок инициализации полей
 
@@ -427,7 +427,7 @@ Robot first("R2D2");       // Разрешено.
 // Robot second = "C3PO";  // Неявное преобразование из const char* в Robot запрещено explicit.
 ~~~
 
-Полный пример перегрузки, делегирования и <code>explicit</code>: [[Материалы для студентов/01_classes_and_object_model/steps/07_delegating_explicit.cpp|07_delegating_explicit.cpp]].
+Полный пример перегрузки, делегирования и <code>explicit</code>: [[01_classes_and_object_model/steps/07_delegating_explicit.cpp|07_delegating_explicit.cpp]].
 
 ## 16. Default, deleted, copy и move: карта конструкторов
 
@@ -513,7 +513,7 @@ private:
 7. Добавьте читающие <code>const</code>-методы.
 8. Проверьте границы и неуспешные операции.
 
-Демонстрационное состояние проекта: [[Материалы для студентов/01_classes_and_object_model/steps/08_robot_v1.cpp|08_robot_v1.cpp]].
+Демонстрационное состояние проекта: [[01_classes_and_object_model/steps/08_robot_v1.cpp|08_robot_v1.cpp]].
 
 ### Обязательные проверки
 
@@ -585,7 +585,7 @@ assert(!third.moveLeft());
 
 Деструктор задает правила по освобождению ресурсов объекта нашего класса в момент его уничтожения. У деструктора нет возвращаемого типа и параметров. У класса может быть только один деструктор. В текущем классе нет ручного ресурса, поэтому собственный деструктор не нужен; диагностический вывод используется только для наблюдения порядка.
 
-Эксперимент: [[Материалы для студентов/01_classes_and_object_model/steps/09_lifecycle_destructor.cpp|09_lifecycle_destructor.cpp]].
+Эксперимент: [[01_classes_and_object_model/steps/09_lifecycle_destructor.cpp|09_lifecycle_destructor.cpp]].
 
 ## 19. Const-объекты и const-методы
 
@@ -670,7 +670,7 @@ void withdraw(int amount) const; // Неверный контракт.
 > [!warning] Потоки
 > <code>const</code> и <code>mutable</code> сами по себе не обеспечивают потокобезопасность. Одновременное изменение кэша из нескольких потоков требует синхронизации.
 
-Полный эксперимент: [[Материалы для студентов/01_classes_and_object_model/steps/10_const_mutable_cache.cpp|10_const_mutable_cache.cpp]].
+Полный эксперимент: [[01_classes_and_object_model/steps/10_const_mutable_cache.cpp|10_const_mutable_cache.cpp]].
 
 ### Упражнение 3
 
@@ -749,7 +749,7 @@ Robot::Robot(const char* name)
 
 В <code>main.cpp</code> заголовок подключается для использования типа. Заголовок не следует подключать через <code>#include "Robot.cpp"</code>.
 
-Файл [[Материалы для студентов/01_classes_and_object_model/steps/11_out_of_class_overloads.cpp|11_out_of_class_overloads.cpp]] сохраняет пример единым для удобства сравнения, но определения уже вынесены за тело класса.
+Файл [[01_classes_and_object_model/steps/11_out_of_class_overloads.cpp|11_out_of_class_overloads.cpp]] сохраняет пример единым для удобства сравнения, но определения уже вынесены за тело класса.
 
 ## 23. Перегрузка обычных методов
 
@@ -824,7 +824,7 @@ Robot имеет Battery
 
 Составные части конструируются до тела конструктора внешнего объекта и уничтожаются после начала его деструктора в обратном порядке.
 
-Проект после выделения ответственностей: [[Материалы для студентов/01_classes_and_object_model/steps/12_composition.cpp|12_composition.cpp]].
+Проект после выделения ответственностей: [[01_classes_and_object_model/steps/12_composition.cpp|12_composition.cpp]].
 
 ## 26. Публичный интерфейс
 
@@ -949,7 +949,7 @@ private:
 
 Изменение общего счётчика должно быть частью осознанного контракта. В многопоточной программе для него потребуется синхронизация или подходящий атомарный тип.
 
-Совместный пример: [[Материалы для студентов/01_classes_and_object_model/steps/13_enum_static.cpp|13_enum_static.cpp]].
+Совместный пример: [[01_classes_and_object_model/steps/13_enum_static.cpp|13_enum_static.cpp]].
 
 ---
 
@@ -999,7 +999,7 @@ std::cout << offsetof(LayoutA, value) << '\n';
 
 Конкретные числа зависят от платформы и ABI. Не запоминайте их как универсальные.
 
-Эксперимент: [[Материалы для студентов/01_classes_and_object_model/steps/14_layout_alignment.cpp|14_layout_alignment.cpp]].
+Эксперимент: [[01_classes_and_object_model/steps/14_layout_alignment.cpp|14_layout_alignment.cpp]].
 
 ### Упражнение 4
 
@@ -1050,7 +1050,7 @@ struct Measurement {
 
 Каждая операция записи должна одновременно обновлять значение и тег. Каждая операция чтения сначала проверяет тег.
 
-Полный учебный пример: [[Материалы для студентов/01_classes_and_object_model/steps/15_tagged_union.cpp|15_tagged_union.cpp]].
+Полный учебный пример: [[01_classes_and_object_model/steps/15_tagged_union.cpp|15_tagged_union.cpp]].
 
 > [!warning] Граница примера
 > Учебный union содержит только простые типы. Для безопасной альтернативы со сложными типами стандартная библиотека предоставляет <code>std::variant</code>, который будет изучаться позже.
@@ -1077,7 +1077,7 @@ struct Measurement {
 10. Некорректные входные данные нормализуются либо запрещаются.
 11. Публичный интерфейс не предоставляет прямых сеттеров координат и энергии.
 
-Финальное демонстрационное состояние: [[Материалы для студентов/01_classes_and_object_model/steps/16_robot_v2.cpp|16_robot_v2.cpp]].
+Финальное демонстрационное состояние: [[01_classes_and_object_model/steps/16_robot_v2.cpp|16_robot_v2.cpp]].
 
 ## 34. Обязательные сценарии проверки
 
@@ -1131,7 +1131,7 @@ struct Measurement {
 
 ## 36. Сборка
 
-Из корня [[Материалы для студентов/01_classes_and_object_model/README|пакета лабораторной]]:
+Из корня [[01_classes_and_object_model/README|пакета лабораторной]]:
 
 ~~~bash
 cmake --preset debug
