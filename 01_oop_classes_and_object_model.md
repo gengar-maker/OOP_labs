@@ -15,15 +15,15 @@ lab_number: 1
 status: ready
 up: "[[00_OOP_Labs_Index]]"
 next: "[[02_raii_constructor_exceptions_noexcept]]"
-project: "[[Материалы для студентов/01_classes_and_object_model/README]]"
+project: "[[01_classes_and_object_model/README]]"
 updated: 2026-10-05
 ---
 
 # Лабораторная работа №1: классы и устройство объектов
 
 > [!info] Материалы работы
-> **Исходники по шагам:** [[Материалы для студентов/01_classes_and_object_model/steps/README|steps]]  
-> **CMake-проект:** [[Материалы для студентов/01_classes_and_object_model/README|инструкция по сборке]]  
+> **Исходники по шагам:** [[steps/README|steps]]  
+> **CMake-проект:** [[README|инструкция по сборке]]  
 > **Следующая тема:** [[02_raii_constructor_exceptions_noexcept|RAII, исключения конструкторов и noexcept]]
 
 ## 1. Цель работы
