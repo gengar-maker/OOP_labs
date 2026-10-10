@@ -1,0 +1,2 @@
+add_executable(lab02_task_01_int_array 01_int_array.cpp)
+target_link_libraries(lab02_task_01_int_array PRIVATE lab02_project_options)

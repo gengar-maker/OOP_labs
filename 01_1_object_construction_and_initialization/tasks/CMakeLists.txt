@@ -1,0 +1,1 @@
+add_lab011_executable(lab011_task_01_device_profile 01_device_profile.cpp)

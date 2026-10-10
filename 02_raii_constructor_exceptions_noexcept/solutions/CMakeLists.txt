@@ -1,0 +1,1 @@
+add_lab02_executable(lab02_solution_01_int_array 01_int_array_solution.cpp)

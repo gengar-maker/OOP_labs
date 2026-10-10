@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: current step",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/bin/lab02_step_${fileBasenameNoExtension}",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "CMake: build current step"
+    }
+  ]
+}

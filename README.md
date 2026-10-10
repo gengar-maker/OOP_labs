@@ -1,46 +1,53 @@
 ---
-title: "Лабораторная работа №1: классы и устройство объектов"
+title: "Лабораторные работы по ООП на C++"
 aliases:
-  - "Lab 01 Project"
+  - "C++ OOP Labs"
 tags:
   - cpp
   - oop
   - cmake
   - vscode
-type: laboratory-project
+type: course-index
 course: "C++ OOP"
 ---
 
-# Лабораторная работа №1: классы и устройство объектов
+# Лабораторные работы по ООП на C++
 
-Папка является самостоятельным учебным пакетом. Для работы не нужны файлы из других каталогов хранилища.
+Репозиторий содержит конспекты, последовательные примеры, задания и CMake-проекты. Лабораторные изучаются по порядку.
 
-## Содержимое
+## Быстрые ссылки
+
+| № | Тема | Конспект | Проект и сборка |
+|---:|---|---|---|
+| 1 | Классы и устройство объектов | [Открыть конспект](01_classes_and_object_model/01_oop_classes_and_object_model.md) | [README](01_classes_and_object_model/README.md) |
+| 1.1 | Конструирование и инициализация | [Открыть конспект](01_1_object_construction_and_initialization/01_1_object_construction_and_initialization.md) | [README](01_1_object_construction_and_initialization/README.md) |
+| 2 | RAII, исключения, `noexcept` и операторы | [Открыть конспект](02_raii_constructor_exceptions_noexcept/02_raii_constructor_exceptions_noexcept.md) | [README](02_raii_constructor_exceptions_noexcept/README.md) |
+
+## Структура
+
+Каждая лабораторная находится в своей директории и является самостоятельным CMake-проектом:
 
 ~~~text
-01_classes_and_object_model/
-├── .vscode/                           настройки сборки и отладки
-├── steps/                             16 последовательных программ
-├── 01_oop_classes_and_object_model.md конспект и задания
-├── CMakeLists.txt                     конфигурация проекта
-├── CMakePresets.json                  Debug, Release и Sanitizers
-└── README.md                          эта инструкция
+OOP_labs/
+├── 01_classes_and_object_model/
+├── 01_1_object_construction_and_initialization/
+├── 02_raii_constructor_exceptions_noexcept/
+└── README.md
 ~~~
-
-Конспект: [[01_oop_classes_and_object_model|Основы ООП в C++: классы и устройство объектов]].
 
 ## Требования
 
 - CMake 3.21 или новее;
 - Ninja;
-- компилятор с поддержкой C++17;
+- компилятор с поддержкой C++20;
 - VS Code с рекомендуемыми расширениями — необязательно, но удобно.
 
-## Сборка всех шагов
+## Сборка лабораторной №1
 
-Откройте терминал в этой папке:
+Из корня репозитория:
 
 ~~~bash
+cd 01_classes_and_object_model
 cmake --preset debug
 cmake --build --preset debug
 ~~~
@@ -80,9 +87,10 @@ ctest --preset sanitizers
 
 ## VS Code
 
-Откройте именно эту папку:
+Откройте директорию нужной лабораторной:
 
 ~~~bash
+cd 02_raii_constructor_exceptions_noexcept
 code .
 ~~~
 
@@ -94,3 +102,16 @@ code .
 - команда **CMake: Select Configure Preset** — выбрать Debug, Release или Sanitizers.
 
 Для подготовленного <code>launch.json</code> используется расширение CodeLLDB.
+
+## Сборка других лабораторных
+
+Каждый подпроект собирается из своего каталога:
+
+~~~bash
+cd 01_1_object_construction_and_initialization
+cmake --preset debug
+cmake --build --preset debug
+ctest --preset debug
+~~~
+
+Для другой работы замените имя каталога на `01_classes_and_object_model` или `02_raii_constructor_exceptions_noexcept`. Все команды выполняются внутри директории выбранной лабораторной.
