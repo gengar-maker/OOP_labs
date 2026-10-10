@@ -117,18 +117,54 @@ ctest --preset sanitizers
 
 ## VS Code
 
-Откройте директорию нужной лабораторной:
+### Рекомендуемые расширения
+
+При первом открытии VS Code предложит установить расширения из рекомендаций проекта:
+
+- **C/C++** — поддержка C++ и отладчик MSVC в Windows;
+- **CMake Tools** — работа с CMake presets;
+- **CodeLLDB** — отладка в Linux и macOS.
+
+### Открыть весь курс
+
+Из корня репозитория выполните одну и ту же команду в Linux или Windows:
 
 ~~~bash
-cd 02_raii_constructor_exceptions_noexcept
-code .
+code OOP_labs.code-workspace
 ~~~
 
-Доступные действия:
+Если команда `code` недоступна, выберите в VS Code **File → Open Workspace from File...** и откройте файл `OOP_labs.code-workspace`.
+
+В workspace доступны общие задачи:
+
+- `Ctrl+Shift+B` — настроить и собрать сразу все лабораторные;
+- **Terminal → Run Task... → Course: build all labs** — то же действие через меню;
+- **Terminal → Run Task... → Course: test all labs** — собрать и проверить все лабораторные;
+- задачи `Course: build lab ...` и `Course: test lab ...` — собрать или проверить только выбранную работу.
+
+Все общие задачи работают и в Linux, и в Windows. Они вызывают одинаковые CMake presets из соответствующих директорий.
+
+### Открыть одну лабораторную
+
+В Linux:
+
+~~~bash
+code 02_raii_constructor_exceptions_noexcept
+~~~
+
+В Windows PowerShell:
+
+~~~powershell
+code .\02_raii_constructor_exceptions_noexcept
+~~~
+
+При таком способе доступны настройки из `.vscode` выбранной лабораторной:
 
 - `Ctrl+Shift+B` в Windows/Linux или `Cmd+Shift+B` в macOS — собрать все шаги;
-- открыть нужный <code>steps/*.cpp</code> и нажать F5 — собрать и отладить текущий шаг;
-- задача **CTest: run all steps** — запустить весь набор проверок;
-- команда **CMake: Select Configure Preset** — выбрать Debug, Release или Sanitizers.
+- **Terminal → Run Task... → CTest: run all...** — собрать и запустить все проверки лабораторной;
+- **CMake: Select Configure Preset** — выбрать Debug, Release или Sanitizers;
+- открыть нужный `steps/*.cpp`, перейти в **Run and Debug**, выбрать конфигурацию своей ОС и нажать F5 — собрать и запустить текущий пример под отладчиком.
 
-Для подготовленного <code>launch.json</code> используется расширение CodeLLDB.
+Для Linux и macOS выбирайте конфигурацию с пометкой **LLDB**, для Windows с MSVC — конфигурацию с пометкой **MSVC**.
+
+Конфигурация текущего примера формирует имя цели из имени открытого файла. Поэтому запуск через F5 предназначен для файлов из `steps/`. Задания из `tasks/` и решения из `solutions/` можно собирать общей задачей лабораторной и запускать из терминала.

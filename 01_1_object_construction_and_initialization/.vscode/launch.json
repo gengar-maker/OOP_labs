@@ -2,10 +2,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug: current example",
+      "name": "Debug current example (Linux/macOS: LLDB)",
       "type": "lldb",
       "request": "launch",
       "program": "${workspaceFolder}/build/debug/bin/lab011_step_${fileBasenameNoExtension}",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "CMake: build current step"
+    },
+    {
+      "name": "Debug current example (Windows: MSVC)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/debug/bin/lab011_step_${fileBasenameNoExtension}.exe",
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "CMake: build current step"
     }

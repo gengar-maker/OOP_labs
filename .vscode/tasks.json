@@ -1,0 +1,125 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Course: configure lab 01",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/01_classes_and_object_model"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Course: build lab 01",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/01_classes_and_object_model"
+      },
+      "dependsOn": "Course: configure lab 01",
+      "problemMatcher": ["$gcc", "$msCompile"]
+    },
+    {
+      "label": "Course: configure lab 01.1",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/01_1_object_construction_and_initialization"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Course: build lab 01.1",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/01_1_object_construction_and_initialization"
+      },
+      "dependsOn": "Course: configure lab 01.1",
+      "problemMatcher": ["$gcc", "$msCompile"]
+    },
+    {
+      "label": "Course: configure lab 02",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/02_raii_constructor_exceptions_noexcept"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Course: build lab 02",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/02_raii_constructor_exceptions_noexcept"
+      },
+      "dependsOn": "Course: configure lab 02",
+      "problemMatcher": ["$gcc", "$msCompile"]
+    },
+    {
+      "label": "Course: build all labs",
+      "dependsOn": [
+        "Course: build lab 01",
+        "Course: build lab 01.1",
+        "Course: build lab 02"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Course: test lab 01",
+      "type": "shell",
+      "command": "ctest",
+      "args": ["--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/01_classes_and_object_model"
+      },
+      "dependsOn": "Course: build lab 01",
+      "problemMatcher": []
+    },
+    {
+      "label": "Course: test lab 01.1",
+      "type": "shell",
+      "command": "ctest",
+      "args": ["--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/01_1_object_construction_and_initialization"
+      },
+      "dependsOn": "Course: build lab 01.1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Course: test lab 02",
+      "type": "shell",
+      "command": "ctest",
+      "args": ["--preset", "debug"],
+      "options": {
+        "cwd": "${workspaceFolder}/02_raii_constructor_exceptions_noexcept"
+      },
+      "dependsOn": "Course: build lab 02",
+      "problemMatcher": []
+    },
+    {
+      "label": "Course: test all labs",
+      "dependsOn": [
+        "Course: test lab 01",
+        "Course: test lab 01.1",
+        "Course: test lab 02"
+      ],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    }
+  ]
+}

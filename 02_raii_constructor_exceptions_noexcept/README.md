@@ -80,4 +80,12 @@ AddressSanitizer и UndefinedBehaviorSanitizer помогают найти ут�
 
 ## VS Code
 
-Откройте именно этот каталог командой `code .`. Для файлов из `steps/` доступна конфигурация **Debug: current step**.
+Из корня репозитория откройте этот каталог как отдельный проект:
+
+~~~bash
+code 02_raii_constructor_exceptions_noexcept
+~~~
+
+`Ctrl+Shift+B` собирает лабораторную. Для запуска примера откройте файл из `steps/`, перейдите в **Run and Debug**, выберите конфигурацию **LLDB** для Linux/macOS или **MSVC** для Windows и нажмите F5.
+
+Открытие сразу всего курса и общие задачи описаны в [корневой инструкции](../README.md#vs-code).

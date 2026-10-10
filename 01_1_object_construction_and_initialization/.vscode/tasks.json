@@ -20,7 +20,7 @@
         "cwd": "${workspaceFolder}"
       },
       "dependsOn": "CMake: configure debug",
-      "problemMatcher": "$gcc",
+      "problemMatcher": ["$gcc", "$msCompile"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -41,7 +41,7 @@
         "cwd": "${workspaceFolder}"
       },
       "dependsOn": "CMake: configure debug",
-      "problemMatcher": "$gcc"
+      "problemMatcher": ["$gcc", "$msCompile"]
     },
     {
       "label": "CTest: run all",

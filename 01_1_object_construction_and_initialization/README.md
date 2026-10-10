@@ -76,4 +76,12 @@ ctest --preset sanitizers
 
 ## VS Code
 
-Откройте именно этот каталог командой `code .`. Для файлов из `steps/` доступна конфигурация **Debug: current example**.
+Из корня репозитория откройте этот каталог как отдельный проект:
+
+~~~bash
+code 01_1_object_construction_and_initialization
+~~~
+
+`Ctrl+Shift+B` собирает лабораторную. Для запуска примера откройте файл из `steps/`, перейдите в **Run and Debug**, выберите конфигурацию **LLDB** для Linux/macOS или **MSVC** для Windows и нажмите F5.
+
+Открытие сразу всего курса и общие задачи описаны в [корневой инструкции](../README.md#vs-code).
