@@ -42,26 +42,62 @@ OOP_labs/
 - компилятор с поддержкой C++20;
 - VS Code с рекомендуемыми расширениями — необязательно, но удобно.
 
-## Сборка лабораторной №1
+## Сборка любой лабораторной
 
-Из корня репозитория:
+Каждая лабораторная — самостоятельный CMake-проект, но имена presets и порядок сборки у всех одинаковые: `debug`, `release` и `sanitizers`. Команды нужно выполнять внутри директории выбранной работы.
+
+### Linux
+
+Нужны CMake, Ninja и GCC либо Clang. Например, в Ubuntu или Debian зависимости можно установить так:
+
+~~~bash
+sudo apt update
+sudo apt install cmake ninja-build g++
+~~~
+
+Сборка и проверка из корня репозитория:
 
 ~~~bash
 cd 01_classes_and_object_model
 cmake --preset debug
 cmake --build --preset debug
+ctest --preset debug
 ~~~
 
-Исполняемые файлы появятся в <code>build/debug/bin/</code>.
-
-## Сборка и запуск одного шага
+Запуск одного из примеров:
 
 ~~~bash
-cmake --build --preset debug --target lab01_step_08_robot_v1
 ./build/debug/bin/lab01_step_08_robot_v1
 ~~~
 
-Имя цели строится так:
+### Windows
+
+Нужны CMake, Ninja и MSVC из комплекта **Visual Studio 2022 Build Tools** с компонентом **Desktop development with C++**. Команды следует выполнять в **Developer PowerShell for VS 2022**, чтобы компилятор `cl.exe` был доступен CMake.
+
+Сборка и проверка из корня репозитория:
+
+~~~powershell
+cd .\01_classes_and_object_model
+cmake --preset debug
+cmake --build --preset debug
+ctest --preset debug
+~~~
+
+Запуск одного из примеров:
+
+~~~powershell
+.\build\debug\bin\lab01_step_08_robot_v1.exe
+~~~
+
+В обоих случаях исполняемые файлы появятся в `build/debug/bin/`. Вместо `01_classes_and_object_model` можно указать директорию любой другой лабораторной.
+
+## Сборка одного шага
+
+~~~bash
+cmake --build --preset debug --target lab01_step_08_robot_v1
+~~~
+
+Имена целей перечислены в `README.md` и `steps/README.md` выбранной лабораторной. Например, в работе №1 имя цели строится так:
 
 ~~~text
 steps/08_robot_v1.cpp
@@ -69,15 +105,9 @@ steps/08_robot_v1.cpp
 lab01_step_08_robot_v1
 ~~~
 
-## Автоматическая проверка
-
-Каждый шаг зарегистрирован как отдельный CTest-тест:
-
-~~~bash
-ctest --preset debug
-~~~
-
 ## Санитайзеры
+
+Preset `sanitizers` предназначен для GCC и Clang и рекомендуется для Linux. При сборке MSVC используйте presets `debug` и `release`.
 
 ~~~bash
 cmake --preset sanitizers
@@ -96,22 +126,9 @@ code .
 
 Доступные действия:
 
-- <code>Cmd+Shift+B</code> — собрать все шаги;
+- `Ctrl+Shift+B` в Windows/Linux или `Cmd+Shift+B` в macOS — собрать все шаги;
 - открыть нужный <code>steps/*.cpp</code> и нажать F5 — собрать и отладить текущий шаг;
 - задача **CTest: run all steps** — запустить весь набор проверок;
 - команда **CMake: Select Configure Preset** — выбрать Debug, Release или Sanitizers.
 
 Для подготовленного <code>launch.json</code> используется расширение CodeLLDB.
-
-## Сборка других лабораторных
-
-Каждый подпроект собирается из своего каталога:
-
-~~~bash
-cd 01_1_object_construction_and_initialization
-cmake --preset debug
-cmake --build --preset debug
-ctest --preset debug
-~~~
-
-Для другой работы замените имя каталога на `01_classes_and_object_model` или `02_raii_constructor_exceptions_noexcept`. Все команды выполняются внутри директории выбранной лабораторной.
